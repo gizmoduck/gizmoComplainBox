@@ -1,0 +1,33 @@
+it starts the Tomcat server on port 8080. If you access the http://localhost:8080/employees URL from the browser, you will get JSON response of customers as the response.
+
+If you want to start the application on different port than the default one, you can specify the port by suing --server.port option as follows.
+
+1
+java --server.port=9000 -jar target/spring-boot-example-0.0.1-SNAPSHOT.jar
+If you want to start the application with debug enabled, you can use the following command:
+
+1
+java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n -jar target/spring-boot-example-0.0.1-SNAPSHOT.jar
+To start the application with debug log enabled, you can use the following command:
+
+1
+java -jar target/spring-boot-example-0.0.1-SNAPSHOT.jar --debug
+If you want to specify the sever running port in ‘application.properties‘ file, you can include the following property into the file.
+
+1
+server.port=${port:9000}
+With above entry in application.properties file, instead of using --server.port option, you can simply user --port option with java -jar command in order to specify the port.
+
+Most of the time, your configuration properties are different from environment to environment. 
+For environment like, development, production and testing, you might need to keep different set of configuration properties. 
+You can do this by keeping different configuration profiles for each environment.
+
+You should create the configuration properties file in the following format in order to achieve this.
+
+application-${profile}.properties
+Let’s say you need to keep two configuration profiles for ‘development’ and ‘production’ environment separately. 
+In this case, you should create two property files as application-development.properties and application-production.properties.
+
+When starting the application using java -jar command, you should specify the profile with -D parameter as follows:
+
+java -jar -Dspring.profiles.active=production customer-0.0.1-SNAPSHOT.jar
