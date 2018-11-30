@@ -1,3 +1,7 @@
+Usefull links
+https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+
 it starts the Tomcat server on port 8080. If you access the http://localhost:8080/employees URL from the browser, you will get JSON response of customers as the response.
 
 If you want to start the application on different port than the default one, you can specify the port by suing --server.port option as follows.
