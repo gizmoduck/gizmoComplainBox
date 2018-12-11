@@ -6,19 +6,15 @@ it starts the Tomcat server on port 8080. If you access the http://localhost:808
 
 If you want to start the application on different port than the default one, you can specify the port by suing --server.port option as follows.
 
-1
 java --server.port=9000 -jar target/spring-boot-example-0.0.1-SNAPSHOT.jar
 If you want to start the application with debug enabled, you can use the following command:
 
-1
 java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n -jar target/spring-boot-example-0.0.1-SNAPSHOT.jar
 To start the application with debug log enabled, you can use the following command:
 
-1
 java -jar target/spring-boot-example-0.0.1-SNAPSHOT.jar --debug
 If you want to specify the sever running port in ‘application.properties‘ file, you can include the following property into the file.
 
-1
 server.port=${port:9000}
 With above entry in application.properties file, instead of using --server.port option, you can simply user --port option with java -jar command in order to specify the port.
 

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>example.boot.spring</groupId>
-	<artifactId>spring-boot-example</artifactId>
+	<artifactId>gizmoComplainBox</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
